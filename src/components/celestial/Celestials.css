@@ -1,0 +1,124 @@
+.celestials {
+    width: 445px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+}
+
+.celestials__name {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 115px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.celestials__desc {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+
+    color: #D0D6F9;
+}
+
+.celestials__line {
+    width: 90%;
+    opacity: 0.5
+}
+
+.celestials__down {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+.celestials__values {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+
+    color: #D0D6F9;
+}
+
+.celestials__values--numb {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+
+    text-transform: uppercase;
+}
+
+/* Media */
+
+@media (max-width: 768px) {
+    .celestials {
+        width: 573px;
+    }
+
+    .celestials__name {
+        font-size: 80px;
+        line-height: 92px;
+        text-align: center;
+    }
+
+    .celestials__desc {
+        font-size: 16px;
+        line-height: 28px;
+
+        text-align: center;
+    }
+
+    .celestials__down {
+        justify-content: center;
+        gap: 6rem;
+    }
+
+    .celestials__values,
+    .celestials__values--numb {
+        text-align: center;
+    }
+}
+
+/* Mobile media */
+
+@media (max-width: 450px) {
+    .celestials {
+        max-width: 425px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .celestials__name {
+        font-size: 56px;
+        line-height: 64px;
+    }
+
+    .celestials__desc {
+        width: 340px;   
+    }
+
+    .celestials__down {
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+    }
+
+    .celestials__values,
+    .celestials__values--numb {
+        margin: 1rem;
+    }
+}

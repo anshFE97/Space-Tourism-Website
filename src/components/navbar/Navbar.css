@@ -1,0 +1,153 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 96px;
+    width: 100vw;
+}
+
+.logo {
+    margin-left: 55px;
+}
+
+.line {
+    position: absolute;
+    width: 523px;
+    height: 1px;
+    left: 188px;
+    background-color: white;
+    opacity: 0.25;
+    z-index: 2;
+    display: block;
+}
+
+
+.nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 840px;
+    height: 96px;
+    right: 0px;
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+}
+
+.nav__link > img {
+  display: none;
+}
+
+.nav__link--list {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    gap: 7rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+}
+
+.nav__link--list li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__link--list li a::after {
+    content: "";
+    position: absolute;
+    bottom: -200%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in;
+  }
+  
+  li a:hover::after {
+    opacity: 0.5;
+    background-color: #fff;
+  }
+
+  li a.active::after {
+    opacity: 1;
+    background-color: #fff;
+  }
+
+  /* MEDIA QUERY */
+  
+  @media screen and (max-width: 800px) {
+    
+
+    .line {
+      display: none;
+    }
+
+    .nav__link {
+      width: 450px;
+    }
+
+    .nav__link--list {
+      font-size: 14px;
+      line-height: 17px;
+      gap: 1.5rem;
+
+      letter-spacing: 2.3625px;
+    }
+  }
+
+  /* Mobile mdeia */
+
+  @media (max-width: 450px) {
+
+    .large {
+      display: none;
+    }
+
+    .nav__ham {
+      position: absolute;
+      top: 30px;
+      right: -30px;
+    }
+
+    .nav__close {
+      padding: 1rem;
+    }
+
+    .nav__link img {
+      display: initial;
+      align-self: flex-end;
+    }
+
+    .nav__link {
+      flex-direction: column;
+      width: 55%;
+      height: calc(100vh + 200%);
+      position: absolute;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5rem;
+      padding: 1rem;
+      top: 0;
+      right: -17%;
+      z-index: 10;
+    }
+
+    .nav__link--list {
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+    }
+
+    .nav__link--list li a::after {
+      display: none;
+    }
+  }
+

@@ -1,0 +1,220 @@
+.crew {
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.crew__main {
+    display: flex;
+
+}
+
+.crew__main--left {
+    display: flex;
+    margin-left: 2rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.crew__main--left__up {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+}
+
+.crew__main--left__up h2 {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    
+
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+}
+
+.crew__main--left__up h2 span {
+    opacity: 0.5;
+}
+
+.crew__main--left__down {
+    margin-top: 7rem;
+}
+
+.crew__main--left__down h2:nth-of-type(1) {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin: 1rem 0;
+}
+
+.crew__main--left__down h2:nth-of-type(2) {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.crew__main--left__down p {
+    width: 440px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+
+    color: #D0D6F9;
+}
+
+.crew__main--right {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.crew__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+} 
+
+.crew__right img {
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* button */
+
+.slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    gap: 0.5rem;
+  }
+  
+  .slide-button {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .slide-button.active {
+    background-color: #fff;
+  }
+
+
+  /* Media */
+
+  @media (max-width: 768px) {
+    .crew {
+        background: url('/public/assets/crew/background-crew-tablet.jpg');
+        background-size: 100% 100%;
+    }
+
+    .crew__main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .crew__main--left__up {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .crew__main--left__down {
+        margin-top: 1rem;
+    }
+
+    .crew__main--left__down h2:nth-of-type(1) {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .crew__main--left__down h2:nth-of-type(2) {
+        font-size: 32px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .crew__main--left__down p {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+  }
+
+  /* MOBILE MEDIA */
+
+  @media (max-width: 450px) {
+    .crew {
+        background: url('/public/assets/crew/background-crew-mobile.jpg');
+        background-size: 100% 100%;
+    }
+
+    .crew__main {
+        flex-direction: column-reverse;
+    }
+
+    .crew__right img {
+        width: 100%;
+    }
+
+    .crew__tab {
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .crew__tab span {
+        opacity: 0.5;
+    }
+
+    .crew__main--left__up {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .crew__main--left__down h2:nth-of-type(1) {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .crew__main--left__down p {
+        font-size: 15px;
+        line-height: 25px;
+        width: 400px;
+    }
+  }
